@@ -10,8 +10,18 @@ public class Question {
 	 * @param answer
 	 * @param points
 	 */
+	private String prompt;
+	private String answer;
+	private int points;
+
 	public Question(String prompt, String answer, int points) {
-		throw new NotYetImplementedException();
+		this.prompt = prompt;
+		this.answer = answer;
+		this.points = points;
+	}
+
+	public String getPrompt(){
+		return prompt;
 	}
 	
 	/**
@@ -40,7 +50,7 @@ public class Question {
 	 * @return int points
 	 */
 	public int getPoints() {
-		throw new NotYetImplementedException();
+		return points;
 	}
 	
 	/**
@@ -48,10 +58,12 @@ public class Question {
 	 * @return String answer
 	 */
 	public String getAnswer() {
-		throw new NotYetImplementedException();
+		return answer;
 	}
 	
 	public static void main(String[] args) {
 		// TODO: Create a Question object of your own!
+		Question q1 = new Question("What's 1+1?", "2", 1);
+		q1.displayPrompt();
 	}
 }
